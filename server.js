@@ -13,6 +13,11 @@ const multer = require('multer');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
 
+// Create logs folder if it doesn't exist
+if (!fs.existsSync(path.join(__dirname, 'logs'))) {
+    fs.mkdirSync(path.join(__dirname, 'logs'));
+}
+
 const accessLogStream = fs.createWriteStream(
     path.join(__dirname, 'logs', 'access.log'),
     { flags: 'a' }
