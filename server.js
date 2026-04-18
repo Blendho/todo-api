@@ -93,13 +93,7 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS
     }
 });
-transporter.verify(function(error, success) {
-    if (error) {
-        console.log('Email service error:', error);
-    } else {
-        console.log('Email service is ready to send emails ✅');
-    }
-});
+
 
 async function sendWelcomeEmail(userEmail, userName) {
     const mailOptions = {
