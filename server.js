@@ -623,6 +623,8 @@ app.post('/api/reset-password',
 
 const PORT = process.env.PORT || 3000;
 
+console.log('DATABASE_URL exists:', !!process.env.DATABASE_URL);
+
 app.listen(PORT, function() {
     console.log(`Server running on port ${PORT}`);
 });
