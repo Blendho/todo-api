@@ -512,7 +512,7 @@ app.post('/api/forgot-password',
             );
 
             // Step 5: Send email
-            const resetLink = `http://localhost:3000/reset-password?token=${resetToken}`;
+            const resetLink = `http://todo-api-yxa6.onrender.com/reset-password?token=${resetToken}`;
 
             await transporter.sendMail({
                 from: process.env.EMAIL_USER,
@@ -623,7 +623,6 @@ app.post('/api/reset-password',
 
 const PORT = process.env.PORT || 3000;
 
-console.log('DATABASE_URL exists:', !!process.env.DATABASE_URL);
 
 app.listen(PORT, function() {
     console.log(`Server running on port ${PORT}`);
