@@ -625,6 +625,9 @@ const PORT = process.env.PORT || 3000;
 console.log('DB_URL exists:', !!process.env.DB_URL);
 console.log('DB_URL starts with:', process.env.DB_URL?.substring(0, 20));
 
+
+console.log('ALL ENV KEYS:', Object.keys(process.env).join(', '));
+
 app.listen(PORT, function() {
     console.log(`Server running on port ${PORT}`);
 });
