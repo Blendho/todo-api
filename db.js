@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Pool } = require('pg');
 
 const pool = new Pool({
-    connectionString: 'postgresql://postgres:siDGHrdRyRhbYSsBLLswcnspJofYWwND@postgres.railway.internal:5432/railway',
+    connectionString: 'postgresql://postgres:siDGHrdRyRhbYSsBLLswcnspJofYWwND@maglev.proxy.rlwy.net:47565/railway',
     ssl: false
 });
 
